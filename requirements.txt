@@ -11,3 +11,4 @@ langchain-openai
 PyPDF2
 rich==13.7.1
 chromadb-pysqlite3
+numpy<2.0
