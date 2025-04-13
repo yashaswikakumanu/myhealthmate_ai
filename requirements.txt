@@ -8,3 +8,4 @@ tqdm
 langchain-community
 faiss-cpu
 langchain-openai
+PyPDF2
