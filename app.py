@@ -3,9 +3,12 @@ from PyPDF2 import PdfReader
 from main import run_healthmate
 import streamlit as st
 import os
+from dotenv import load_dotenv
+load_dotenv()
+# os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
 
 # ✅ Securely use OpenAI key from Streamlit secrets
-os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
+# os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
 
 st.set_page_config(page_title="HealthMate AI", layout="wide")
 
