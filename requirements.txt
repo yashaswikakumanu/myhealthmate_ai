@@ -1,13 +1,13 @@
 streamlit
-crewai
+crewai==0.10.0
 openai
-langchain
+langchain==0.1.16
+langchain-openai==0.1.1
+langchain-community==0.0.34
 python-dotenv
 pypdf
 tqdm
-langchain-community
 faiss-cpu
-langchain-openai
 PyPDF2
 rich==13.7.1
 chromadb-pysqlite3
