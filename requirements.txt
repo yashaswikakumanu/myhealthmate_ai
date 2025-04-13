@@ -10,3 +10,4 @@ faiss-cpu
 langchain-openai
 PyPDF2
 rich==13.7.1
+chromadb-pysqlite3
