@@ -9,3 +9,4 @@ langchain-community
 faiss-cpu
 langchain-openai
 PyPDF2
+sqlite3 >= 3.35.0
