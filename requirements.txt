@@ -1,5 +1,5 @@
 streamlit
-crewai==0.10.4
+crewai
 openai
 langchain
 python-dotenv
