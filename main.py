@@ -13,23 +13,10 @@ def run_healthmate(parsed_text: str) -> dict:
     if hasattr(result, "dict"):
         result = result.dict()
 
-    if isinstance(result, str):
-        # Fallback if result is a string (e.g., error or summary)
-        return {
-            "🩺 Diagnosis Summary": result,
-            "🥗 Meal Plan": result,
-            "💪 Workout Plan": result,
-            "🚨 Urgent Care": result,
-            "📅 Next Steps": result,
-        }
-
-    # Now safely extract task_outputs
-    task_outputs = result.get("tasks_output", []) if isinstance(result, dict) else []
+    task_outputs = result.get("tasks_output", [])
 
     # Map agents to their output
-    agent_output_map = {
-        task.get("agent", "Unknown"): task.get("raw", "❌ No output") for task in task_outputs if task.get("raw")
-    }
+    agent_output_map = {task["agent"]: task["raw"] for task in task_outputs if task.get("raw")}
 
     return {
         "🩺 Diagnosis Summary": agent_output_map.get("Clinical Diagnosis Specialist", "❌ No diagnosis found."),
