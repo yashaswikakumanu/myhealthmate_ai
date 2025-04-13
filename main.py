@@ -8,6 +8,7 @@ os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
 def run_healthmate(parsed_text: str) -> dict:
     crew = get_healthmate_crew(parsed_text)
     result = crew.kickoff()
+    print("res",result)
 
     task_outputs = []
 
