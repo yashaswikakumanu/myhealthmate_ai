@@ -13,6 +13,8 @@ def run_healthmate(parsed_text: str) -> dict:
     if hasattr(result, "dict"):
         result = result.dict()
 
+    print(result)
+
     task_outputs = result.get("tasks_output", [])
 
     # Map agents to their output
